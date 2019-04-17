@@ -1,0 +1,13 @@
+steps:
+- id: push_template
+  name: 'gcr.io/$PROJECT_ID/uploadRemoteConfig:latest'
+  args: 
+    - '--projectid=anzsandbox'
+    - '--action=publish'
+    - '--etag=etag-222459710685-5'
+
+- id: get_template
+  name: 'gcr.io/$PROJECT_ID/uploadRemoteConfig:latest'
+  args: 
+    - '--projectid=anzsandbox'
+    - '--action=get'

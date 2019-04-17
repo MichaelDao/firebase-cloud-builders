@@ -1,2 +1,4 @@
 steps:
-- name: 'gcr.io/$PROJECT_ID/uploadFirestore:latest'
+- id: push_sample_data
+  name: 'gcr.io/$PROJECT_ID/uploadFirestore:latest'
+  args: ['--projectid=anzsandbox']

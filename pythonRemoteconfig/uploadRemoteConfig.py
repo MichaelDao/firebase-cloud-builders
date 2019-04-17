@@ -7,7 +7,7 @@ import requests
 import io
 
 
-def authenticateFirebase(project_id):
+def createURL(project_id):
     # we will need to create our remote config url
     base_url = 'https://firebaseremoteconfig.googleapis.com'
     remote_config_endpoint = 'v1/projects/' + project_id + '/remoteConfig'
@@ -95,7 +95,7 @@ def main():
         _invalid_entry()
     else:
         # create the remote config url with the project
-        remote_config_url = authenticateFirebase(args.projectid)
+        remote_config_url = createURL(args.projectid)
 
         if args.action and args.action == 'get':
             _get(remote_config_url)
