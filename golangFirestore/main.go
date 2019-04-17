@@ -23,8 +23,6 @@ import (
 	"google.golang.org/api/iterator"
 
 	"cloud.google.com/go/firestore"
-
-	"google.golang.org/api/firebaseremoteconfig/v1"
 )
 
 func main() {
@@ -47,7 +45,6 @@ func main() {
 	defer client.Close()
 	// [END fs_initialize]
 
-	firebaseremoteconfigService, err := firebaseremoteconfig.New(oauthHttpClient)
 
 
 	// [START fs_add_data_1]

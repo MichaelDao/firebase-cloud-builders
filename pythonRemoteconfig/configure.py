@@ -1,6 +1,7 @@
 import argparse
 import requests
 import io
+
 import firebase_admin
 from firebase_admin import credentials
 
@@ -9,7 +10,8 @@ PROJECT_ID = 'anzsandbox'
 BASE_URL = 'https://firebaseremoteconfig.googleapis.com'
 REMOTE_CONFIG_ENDPOINT = 'v1/projects/' + PROJECT_ID + '/remoteConfig'
 REMOTE_CONFIG_URL = BASE_URL + '/' + REMOTE_CONFIG_ENDPOINT
-SCOPES = ['https://www.googleapis.com/auth/firebase.remoteconfig']
+
+#SCOPES = ['https://www.googleapis.com/auth/firebase.remoteconfig']
 
 # [START retrieve_access_token]
 
@@ -116,6 +118,7 @@ def main():
     parser.add_argument('--etag')
     parser.add_argument('--version')
     args = parser.parse_args()
+    
 
     if args.action and args.action == 'get':
         _get()
