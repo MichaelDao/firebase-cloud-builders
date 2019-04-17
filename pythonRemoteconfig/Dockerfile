@@ -4,4 +4,4 @@ ADD uploadRemoteConfig.py /
 
 RUN pip install --upgrade firebase-admin
 
-CMD [ "python", "./uploadRemoteConfig.py" ]
+ENTRYPOINT [ "python", "./uploadRemoteConfig.py" ]

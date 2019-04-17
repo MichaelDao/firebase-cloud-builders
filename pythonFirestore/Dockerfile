@@ -4,4 +4,4 @@ ADD uploadFirestore.py /
 
 RUN pip install --upgrade firebase-admin
 
-CMD [ "python", "./uploadFirestore.py" ]
+ENTRYPOINT [ "python", "./uploadFirestore.py" ]
