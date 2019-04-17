@@ -1,2 +1,2 @@
 steps:
-- name: 'gcr.io/$PROJECT_ID/uploadfirestore'
+- name: 'gcr.io/$PROJECT_ID/uploadFirestore:latest'

@@ -1,8 +1,7 @@
 FROM python:3
 
-ADD uploadfirestore.py /
+ADD uploadFirestore.py /
 
 RUN pip install --upgrade firebase-admin
 
-CMD [ "python", "./uploadfirestore.py" ]
-
+CMD [ "python", "./uploadFirestore.py" ]

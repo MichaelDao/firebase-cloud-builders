@@ -23,6 +23,8 @@ import (
 	"google.golang.org/api/iterator"
 
 	"cloud.google.com/go/firestore"
+
+	"google.golang.org/api/firebaseremoteconfig/v1"
 )
 
 func main() {
@@ -39,9 +41,14 @@ func main() {
 		log.Fatalf("Failed to create client: %v", err)
 	}
 
+
+	
 	// Close client when done.
 	defer client.Close()
 	// [END fs_initialize]
+
+	firebaseremoteconfigService, err := firebaseremoteconfig.New(oauthHttpClient)
+
 
 	// [START fs_add_data_1]
 	_, _, err = client.Collection("users").Add(ctx, map[string]interface{}{
