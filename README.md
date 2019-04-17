@@ -1,6 +1,8 @@
 # playground
 Sourced from many brilliant tutorials from google, i am just dumping all my code here for now as i figure out how things work.
 
+I have developed some rough cloud builders that are designed to be used on google cloud platforms cloud build
+
 ## prerequisites
 make sure your cloud build service account has the `Firebase Admin` role given to it
 
