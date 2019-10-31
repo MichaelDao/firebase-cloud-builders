@@ -34,18 +34,14 @@ func main() {
 
 	// Get a Firestore client.
 	client, err := firestore.NewClient(ctx, projectID)
-	
+
 	if err != nil {
 		log.Fatalf("Failed to create client: %v", err)
 	}
 
-
-	
 	// Close client when done.
 	defer client.Close()
 	// [END fs_initialize]
-
-
 
 	// [START fs_add_data_1]
 	_, _, err = client.Collection("users").Add(ctx, map[string]interface{}{

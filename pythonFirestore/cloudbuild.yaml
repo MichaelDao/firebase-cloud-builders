@@ -1,4 +1,4 @@
 steps:
 - id: push_sample_data
   name: 'gcr.io/$PROJECT_ID/uploadfirestore:latest'
-  args: ['--projectid=anzsandbox']
+  args: ['--projectid=version-bump']

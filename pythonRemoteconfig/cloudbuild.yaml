@@ -2,12 +2,12 @@ steps:
 - id: push_template
   name: 'gcr.io/$PROJECT_ID/uploadremoteconfig:latest'
   args: 
-    - '--projectid=anzsandbox'
+    - '--projectid=version-bump'
     - '--action=publish'
     - '--etag=etag-222459710685-5'
 
 - id: get_template
   name: 'gcr.io/$PROJECT_ID/uploadremoteconfig:latest'
   args: 
-    - '--projectid=anzsandbox'
+    - '--projectid=version-bump'
     - '--action=get'
